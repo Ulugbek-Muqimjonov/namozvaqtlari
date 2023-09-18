@@ -9,6 +9,7 @@ const tabelBody = document.querySelector(".time-tabel__tabel-body");
 const changeBtnWrap = document.querySelector(".time-tebel__btn-wrap");
 const monthSellect = document.querySelector(".time-tabel__month-sellect");
 const changeLanguageList = document.querySelector(".site-header__list");
+const timeLeft = document.querySelector(".times-list__desc");
 const months = [
     "yanvar",
     "fevral",
@@ -50,7 +51,7 @@ async function getDayTime (url) {
         const itempeshin =  dayTemplateClone.querySelector(".item-peshin");
         const peshin = dayTemplateClone.querySelector(".js-peshin-time");
         peshin.textContent = data.times.peshin;
-
+        
         
         const date1 = dayTemplateClone.querySelector(".js-region1");
         date1.textContent = data.region;
@@ -59,7 +60,7 @@ async function getDayTime (url) {
         const asr = dayTemplateClone.querySelector(".js-asr-time");
         asr.textContent = data.times.asr;
         
-       
+        
         const date2 = dayTemplateClone.querySelector(".js-region2");
         date2.textContent = data.region;
         
@@ -76,7 +77,8 @@ async function getDayTime (url) {
         
         const date4 = dayTemplateClone.querySelector(".js-region4");
         date4.textContent = data.region;
-      
+        
+        
         itemFragment.appendChild(dayTemplateClone);
         ellist.appendChild(itemFragment);
         setInterval(() => {
@@ -87,53 +89,62 @@ async function getDayTime (url) {
             const now_year = new_date.getFullYear();
             const now_day = new_date.getDate();
             const now_second = new_date.getSeconds();
-            const now_fulldate = `Joriy vaqt: ${now_day} ${now_month} ${now_year} yil ${now_hour}:${now_minute}:${String(now_second).padStart(2,"0")}`;
+            const now_fulldate = `Joriy vaqt: ${now_day} ${now_month} ${now_year} yil ${String(now_hour).padStart(2,"0")}:${now_minute}:${String(now_second).padStart(2,"0")}`;
             nowTime.textContent = now_fulldate;
+
             if (bomdod.textContent.slice(0,2) < now_hour && now_hour < data.times.quyosh.slice(0,2)) {
                 itembomdod.style.borderColor = "red";
                 itembomdod.style.color = "red";  
-                
-            }else if(bomdod.textContent.slice(0,2) == now_hour) {
-                if (bomdod.textContent.slice(3) < now_minute < data.times.quyosh.slice(3) ) {
+            }
+            if(bomdod.textContent.slice(0,2) == now_hour) {
+                if (bomdod.textContent.slice(3) < now_minute && now_minute < data.times.quyosh.slice(3)) {
                     itembomdod.style.borderColor = "red";
                     itembomdod.style.color = "red"; 
                 }    
-            }else if (peshin.textContent.slice(0,2) < now_hour  && now_hour < asr.textContent.slice(0,2)) {
+            }
+            if (bomdod.textContent.slice(0,2) > now_hour) {
+                itemxufton.style.borderColor = "red";
+                itemxufton.style.color = "red";        
+            }
+            if (peshin.textContent.slice(0,2) < now_hour  && now_hour < asr.textContent.slice(0,2)) {
                 itempeshin.style.borderColor = "red";
-                itempeshin.style.color = "red";     
-                
-            }else if(peshin.textContent.slice(0,2) == now_hour) {
-                if (peshin.textContent.slice(3) < now_minute < asr.textContent.slice(3)) {
+                itempeshin.style.color = "red";
+            }
+            if(peshin.textContent.slice(0,2) == now_hour) {
+                if (peshin.textContent.slice(3) < now_minute && now_minute < asr.textContent.slice(3)) {
                     itempeshin.style.borderColor = "red";
-                    itempeshin.style.color = "red";   
+                    itempeshin.style.color = "red";  
                 }    
-            }else if (asr.textContent.slice(0,2) < now_hour && now_hour< shom.textContent.slice(0,2)) {
+            }
+            if (asr.textContent.slice(0,2) < now_hour && now_hour< shom.textContent.slice(0,2)) {
                 itemasr.style.borderColor = "red";
-                itemasr.style.color = "red";       
-                
-            }else if(asr.textContent.slice(0,2) == now_hour) {
-                if (asr.textContent.slice(3) < now_minute < shom.textContent.slice(3)) {
+                itemasr.style.color = "red"; 
+            }
+            if(asr.textContent.slice(0,2) == now_hour) {
+                if (asr.textContent.slice(3) < now_minute && now_minute < shom.textContent.slice(3)) {
                     itemasr.style.borderColor = "red";
                     itemasr.style.color = "red";    
                 }    
-            }else if (shom.textContent.slice(0,2) < now_hour && now_hour < xufton.textContent.slice(0,2)) {
+            }
+            if (shom.textContent.slice(0,2) < now_hour && now_hour < xufton.textContent.slice(0,2)) {
                 itemshom.style.borderColor = "red";
-                itemshom.style.color = "red";  
-                
-            }else if(shom.textContent.slice(0,2) == now_hour) {
-                if (shom.textContent.slice(3) < now_minute < xufton.textContent.slice(3) ) {
+                itemshom.style.color = "red";                
+            }
+            if(shom.textContent.slice(0,2) == now_hour) {
+                if (shom.textContent.slice(3) < now_minute  && now_minute < xufton.textContent.slice(3) ) {
                     itemshom.style.borderColor = "red";
-                    itemshom.style.color = "red";   
-                }    
-            }else  if ( now_hour > xufton.textContent.slice(0,2)) {
-                itemxufton.style.borderColor = "red";
-                itemxufton.style.color = "red";       
-            }else if(xufton.textContent.slice(0,2) == now_hour) {
-                if (xufton.textContent.slice(3) < now_minute) {
-                    itemxufton.style.borderColor = "red";
-                    itemxufton.style.color = "red";   
+                    itemshom.style.color = "red";  
                 }    
             }
+            if ( now_hour > xufton.textContent.slice(0,2)) {
+                itemxufton.style.borderColor = "red";
+                itemxufton.style.color = "red";        
+            }
+            if(xufton.textContent.slice(0,2) == now_hour) {
+                itemxufton.style.borderColor = "red";
+                    itemxufton.style.color = "red";     
+            }
+          
             
         },1000);
         
@@ -168,9 +179,8 @@ function render(arr,node) {
         const weekTemplateClone = weekTemplate.cloneNode(true).content;
         
         const weekName = weekTemplateClone.querySelector(".td-week");
-        weekName.textContent = item.weekday.slice(0,2);
-        console.log(weekName.textContent);
-        
+        weekName.textContent = item.weekday.slice(0,2)
+        console.log(weekName);
         const day = weekTemplateClone.querySelector(".td-day");
         day.textContent = item.date.slice(0,10);
         
