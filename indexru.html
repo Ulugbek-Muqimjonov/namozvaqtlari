@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>NAMOZ vaqtlari</title>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container1">
+            <div class="site-header__innerdiv d-flex align-items-center">
+                <a class="logo" href="./index.html">
+                    <img class="logo__img" src="https://namozvaqtlari.com/uploads/namozvaqtlari_logo_new.webp" alt="this site logo">
+                </a>
+                <ul class="site-header__list list-unstyled fs-6 d-flex align-items-center m-0">
+                    <li class="site-header__item uz btn">uz</li>
+                    <li class="site-header__item ru btn">ru</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+        <div class="container1">
+            <section class="site-main__hero hero">
+                <h1 class="hero__title fw-bold m-0">Время намазa</h1>
+                <a class="hero__link" href="https://namozvaqtlari.com/qibla-topish-aniqlash.html" target="blank">Определение Киблы</a>
+                <span class="hero__now-time js-now-time">Joriy vaqt: 11 sentyabr  19:00</span>
+                <form class="hero__form">
+                    <select class="hero__form-select p-2" name="serch_region">
+                        <option value="farg'ona" disabled selected hidden>Выберите регион</option>
+                        <option value="farg'ona">Фергана</option>
+                        <option value="toshkent">Ташкент</option>
+                        <option value="andijon">Андижан</option>
+                        <option value="namangan">Наманган</option>
+                        <option value="sirdaryo">Сырдарья</option>
+                        <option value="surxondaryo">Сурхандарьинская</option>
+                        <option value="qashaqadaryo">Кашкадарья</option>
+                        <option value="jizzax">Джизак</option>
+                        <option value="xorazm">Хорезм</option>
+                        <option value="navoiy">Навои</option>
+                        <option value="buxoro">Бухара</option>
+                        <option value="samarqand">Самарканд</option>
+                    </select>
+                    <button class="hero__form-btn btn btn-success" type="submit">qidirish</button>
+                </form>
+            </section>
+            <section class="site-main__times-list times-list">
+                <div class="container1">
+                    <div class="times-list__wrapper">
+                        <ul class="times-list__list list-unstyled m-0">
+                            
+                        </ul>
+                        <template class="times-list__template">
+                            <li class="times-list__item item-bomdod">
+                                <span class="times-list__item-bold bomdod">Фаджр</span>
+                                <time class="times-list__item-time js-bomdod-time">4:36</time>
+                                <span class="times-list__item-region js-region">Toshkent</span>
+                            </li>
+                            <li class="times-list__item item-peshin">
+                                <span class="times-list__item-bold peshin">Зухр</span>
+                                <time class="times-list__item-time js-peshin-time">4:36</time>
+                                <span class="times-list__item-region js-region1">Toshkent</span>
+                            </li>
+                            <li class="times-list__item item-asr">
+                                <span class="times-list__item-bold asr">Аср</span>
+                                <time class="times-list__item-time js-asr-time">4:36</time>
+                                <span class="times-list__item-region js-region2">Toshkent</span>
+                            </li>
+                            <li class="times-list__item item-shom">
+                                <span class="times-list__item-bold shom">Магриб</span>
+                                <time class="times-list__item-time js-shom-time">4:36</time>
+                                <span class="times-list__item-region js-region3">Toshkent</span>
+                            </li>
+                            <li class="times-list__item item-xufton">
+                                <span class="times-list__item-bold xufton">Иша</span>
+                                <time class="times-list__item-time js-xufton-time">4:36</time>
+                                <span class="times-list__item-region js-region4">Toshkent</span>
+                            </li>
+                        </template>
+                    </div>
+                </div>
+            </section>
+            <section class="site-main__time-tabel time-tabel">
+                <div class="container1">
+                    <div class="time-tabel__wrap">
+                        <ul class="time-tebel__btn-wrap d-flex align-items-center list-unstyled flex-wrap m-0">
+                            <li >
+                                <button class=" time-tabel__btns time-tabel__weekbtn btn btn-primary">Календарь этой недели</button>
+                            </li>
+                            <li>
+                                <select class="time-tabel__btns time-tabel__month-sellect btn btn-dark" name="search_month">
+                                    <option class="time-tabel__month-option" value="" disabled hidden selected>месяц</option>
+                                    <option class="time-tabel__month-option " value="1">январь</option>
+                                    <option class="time-tabel__month-option " value="2">февраль</option>
+                                    <option class="time-tabel__month-option " value="3">Маршировать</option>
+                                    <option class="time-tabel__month-option " value="4">апрель</option>
+                                    <option class="time-tabel__month-option " value="5">Может</option>
+                                    <option class="time-tabel__month-option " value="6">Июнь</option>
+                                    <option class="time-tabel__month-option " value="7">Июль</option>
+                                    <option class="time-tabel__month-option " value="8">Август</option>
+                                    <option class="time-tabel__month-option " value="9">Сентябрь</option>
+                                    <option class="time-tabel__month-option " value="10">Октябрь</option>
+                                    <option class="time-tabel__month-option " value="11">ноябрь</option>
+                                    <option class="time-tabel__month-option " value="12">Декабрь</option>
+                                </select>
+                            </li>
+                            <li class="time-tabel__btn d-flex align-items-center flex-column gap-2">
+                                <button class="time-tabel__btns time-tabel__month-btn btn btn-success">Посмотреть ежемесячный календарь  </button>
+                            </li>
+                            
+                        </ul>
+                        <table class="time-tabel__tabel mt-3">
+                            <thead class="time-tabel__tabel-head">
+                                <tr class="time-tabel__tr">
+                                    <th class="time-tabel__th tabel-icon"></th>
+                                    <th class="time-tabel__th">Дата</th>
+                                    <th class="time-tabel__th">Фаджр</th>
+                                    <th class="time-tabel__th">Зухр</th>
+                                    <th class="time-tabel__th">Аср</th>
+                                    <th class="time-tabel__th">Магриб</th>
+                                    <th class="time-tabel__th">Иша</th>
+                                </tr>
+                            </thead>
+                            <tbody class="time-tabel__tabel-body">
+                                
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                        <template class="time-tabel__template">
+                            <tr class="time-tabel__tr">
+                                <td class="time-tabel__td td-week">1</td>
+                                <td class="time-tabel__td td-day">11.09.2023</td>
+                                <td class="time-tabel__td td-bomdod">4.30</td>
+                                <td class="time-tabel__td td-peshin">12.30</td>
+                                <td class="time-tabel__td td-asr">16.50</td>
+                                <td class="time-tabel__td td-shom">19.00</td>
+                                <td class="time-tabel__td td-xufton">20.30</td>
+                            </tr>
+                        </template>
+                    </div>
+                </div>
+            </section>
+            <section class="site-main__questions questions pb-2">
+                <div class="container1">
+                    <h3 class="question__title fw-bold">Savol-javoblar</h3>
+                    <ul class="question__list list-unstyled m-0 p-0">
+                        <li class="question__item">
+                            <a class="question__link" href="">Jumani ikkinchi azoni</a>
+                        </li>
+                        <li class="question__item">
+                            <a class="question__link" href="">Tafsirning o'zgarishi</a>
+                        </li>
+                        <li class="question__item">
+                            <a class="question__link" href="">Ochiq sochiq kiyim tikish</a>
+                        </li>
+                        <li class="question__item">
+                            <a class="question__link" href="">Nurota ziyoratgohi</a>
+                        </li>
+                        <li class="question__item">
+                            <a class="question__link" href="">Ota va bola boja bo'la oladimi?</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>      
+    </div>
+</main>
+<footer class="site-footer">
+    <div class="container1">
+        <div class="site-footer__top d-flex justify-content-center p-2 flex-column align-items-center">
+            <ul class="site-footer__list list-unstyled m-0 p-0 gap-1 d-flex align-items-center mb-2">
+                <li class="site-footer__item">
+                    <a class="site__footer__link" href="">
+                        <img class="site-footer__link-img" w="15" height="15" src="./images/vcontacte.png" alt="">
+                    </a>    
+                </li>
+                <li class="site-footer__item">
+                    <a class="site__footer__link" href="">
+                        <img class="site-footer__link-img" w="15" height="15" src="./images/odnoclass.png  " alt="">
+                    </a>
+                </li>
+                <li class="site-footer__item">
+                    <a class="site__footer__link" href="">
+                        <img class="site-footer__link-img" w="15" height="15" src="./images/telegram.png" alt="">
+                    </a>
+                </li>
+                <li class="site-footer__item">
+                    <a class="site__footer__link" href="">
+                        <img class="site-footer__link-img" w="15" height="15" src="./images/twitter.png" alt="">
+                    </a>
+                </li>
+                <li class="site-footer__item">
+                    <a class="site__footer__link" href="">
+                        <img class="site-footer__link-img" w="15" height="15" src="./images/twitter.png" alt="">
+                    </a>
+                </li>
+                <li class="site-footer__item">
+                    <a class="site__footer__link" href="">
+                        <img class="site-footer__link-img" w="15" height="15" src="./images/twl.png" alt="">
+                    </a>
+                </li>
+                <li class="site-footer__item">
+                    <a class="site__footer__link" href="">
+                        <img class="site-footer__link-img" w="15" height="15" src="./images/moymir.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <strong class="site-footer__title text-center fw-bold">  Время намаза Ташкент 2023</strong>
+            <p class="site-footer__desc text-center">                
+                На этом сайте вы можете узнать сегодняшнее время молитв во всех городах и районах Узбекистана. Также на сайте размещено сегодняшнее время намаза Ташкент. Кроме того, каждый год календарь Рамадана также предоставляется. На сайте указаны все региональные молитвенные времена, например: Ташкентское, Сырдарьинское, Самаркандское, Джизакское, Каршинское, Сурхандарьинское, Бухарское, Навоийское, Хорезмское, Нукусское, Наманганское, Ферганское и Андижанское молитвенное время и время Фаджр, Полдень, Аср, Шам. , вы будете знать правильное время по времени Хафтона. Время на сайте взято из «Ислам уз» в качестве источника. Друзья Поделитесь сайтом с друзьями для развития сайта.
+            </p>
+        </div>
+    </div>
+</footer>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/mainru.js"></script>
+</body>
+</html>
