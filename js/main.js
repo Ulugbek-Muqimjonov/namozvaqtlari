@@ -141,8 +141,8 @@ async function getDayTime (url) {
             // asr vaqtini yonishini tekshirish
 
             if (now_hour > asr.textContent.slice(0,2) && now_hour < shom.textContent.slice(0,2)) {
-                itemshom.style.borderColor = "red";
-                itemshom.style.color = "red"
+                itemasr.style.borderColor = "red";
+                itemasr.style.color = "red"
             }
             if (now_hour == asr.textContent.slice(0,2)) {
                 if (now_minute > asr.textContent.slice(3)) {
@@ -166,8 +166,8 @@ async function getDayTime (url) {
             // xufton vaqtini yonishini tekshirish
             
             if (now_hour > xufton.textContent.slice(0,2) || now_hour < bomdod.textContent.slice(0,2)) {
-                itemshom.style.borderColor = "red";
-                itemshom.style.color = "red"
+                itemxufton.style.borderColor = "red";
+                itemxufton.style.color = "red"
             }
             if (now_hour == xufton.textContent.slice(0,2)) {
                 itemxufton.style.color = "red"
